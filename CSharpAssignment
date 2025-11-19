@@ -1,0 +1,118 @@
+// Program.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+// This application contains three separate parts, demonstrating basic C# concepts.
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("--- Starting C# Multi-Part Assignment ---");
+        Console.WriteLine();
+
+        // --- Part 1: Basic Variables and Arithmetic ---
+        Part1_BasicArithmetic();
+
+        Console.WriteLine();
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine();
+
+        // --- Part 2: Conditional Logic (If/Else) ---
+        Part2_ConditionalLogic();
+
+        Console.WriteLine();
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine();
+
+        // --- Part 3: Loops and Data Structures (List) ---
+        Part3_LoopsAndLists();
+
+        Console.WriteLine();
+        Console.WriteLine("--- Assignment Complete. Press Enter to exit. ---");
+        Console.ReadLine();
+    }
+
+    /// <summary>
+    /// Part 1: Declares variables, performs arithmetic, and prints the result.
+    /// This part calculates the area of a rectangle.
+    /// </summary>
+    public static void Part1_BasicArithmetic()
+    {
+        Console.WriteLine("--- Part 1: Basic Variables and Arithmetic ---");
+
+        // 1. Declare two floating-point variables for length and width.
+        double length = 15.5;
+        double width = 7.0;
+
+        // 2. Perform an arithmetic operation (multiplication) to calculate the area.
+        double area = length * width;
+
+        // 3. Output the input values and the calculated result.
+        Console.WriteLine($"Length: {length}");
+        Console.WriteLine($"Width: {width}");
+        Console.WriteLine($"Calculated Area: {area:F2}"); // :F2 formats the number to 2 decimal places.
+    }
+
+    /// <summary>
+    /// Part 2: Demonstrates conditional logic using an if/else if/else block.
+    /// This part checks a student's score and assigns a letter grade.
+    /// </summary>
+    public static void Part2_ConditionalLogic()
+    {
+        Console.WriteLine("--- Part 2: Conditional Logic ---");
+
+        // Input score
+        int score = 85;
+        string grade;
+
+        Console.WriteLine($"Student Score: {score}");
+
+        // Conditional checks to determine the grade
+        if (score >= 90)
+        {
+            grade = "A";
+        }
+        else if (score >= 80)
+        {
+            grade = "B";
+        }
+        else if (score >= 70)
+        {
+            grade = "C";
+        }
+        else
+        {
+            grade = "F";
+        }
+
+        Console.WriteLine($"Assigned Grade: {grade}");
+    }
+
+    /// <summary>
+    /// Part 3: Demonstrates using a List (data structure) and a foreach loop.
+    /// This part calculates the sum of all elements in a list.
+    /// </summary>
+    public static void Part3_LoopsAndLists()
+    {
+        Console.WriteLine("--- Part 3: Loops and Data Structures ---");
+
+        // 1. Create a list (dynamic array) of integers.
+        List<int> numbers = new List<int> { 10, 25, 40, 5, 20 };
+        int sum = 0;
+
+        Console.Write("Numbers in the list: ");
+
+        // 2. Use a foreach loop to iterate through the list.
+        foreach (int number in numbers)
+        {
+            Console.Write($"{number} ");
+            // 3. Perform an operation (addition) within the loop.
+            sum += number;
+        }
+
+        Console.WriteLine();
+        Console.WriteLine($"Total Sum of Numbers: {sum}");
+    }
+}
